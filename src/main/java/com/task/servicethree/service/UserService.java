@@ -25,8 +25,9 @@ public class UserService {
 		log.info("{}","SurName: "+payloaduser.getSurName());
 		if(payloaduser.getSurName()==null||payloaduser.getName()=="")
 			throw new UserException("please provide surname");
-		
+			log.info("{}","setting username");
 			user.setName(payloaduser.getName());
+			log.info("{}","setting surname");
 			user.setSurName(payloaduser.getSurName());
 		
 		return user;

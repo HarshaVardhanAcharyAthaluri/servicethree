@@ -22,6 +22,7 @@ public class UserController {
 	@PostMapping("/user")
 	public ResponseEntity<String> saveUser(@RequestBody User user){
 		log.info("{}",user);
+		log.info("{}","saveuser");
 		User savedUser = userService.saveUser(user);
 		return new ResponseEntity<String>(savedUser.getName()+" "+savedUser.getSurName(),HttpStatus.OK);
 	}
